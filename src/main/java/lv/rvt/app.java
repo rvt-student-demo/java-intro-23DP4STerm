@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class app {
 
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;  // Variable to keep track of the sum
@@ -25,9 +26,17 @@ public class app {
             count++;  // Increment the count for each valid number
         }
 
-        // After exiting the loop, print the total sum and count
+        // After exiting the loop, print the total sum, count, and mean
         System.out.println("Thx! Bye!");
         System.out.println("Sum: " + sum);
-        System.out.println("Numbers: " + count);  // Print the count of numbers
+        System.out.println("Numbers: " + count);
+
+        // Only calculate the mean if at least one number was entered
+        if (count > 0) {
+            double mean = (double) sum / count;  // Calculate the mean (using double for accuracy)
+            System.out.println("Average: " + mean);  // Print the mean
+        } else {
+            System.out.println("Average: N/A");  // In case no numbers were entered
+        }
     }
 }
