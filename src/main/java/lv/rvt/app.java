@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class app {
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;  // Variable to keep track of the sum
