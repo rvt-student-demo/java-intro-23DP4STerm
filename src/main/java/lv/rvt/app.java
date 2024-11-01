@@ -2,23 +2,24 @@ package lv.rvt;
 import java.util.*;
 
 
-    class Exercise2 {
-        public static void main(String[] args) {
-          int[] val = {13, -4, 82, 17}; 
-          int[] twice = new int[val.length];
-          
-          System.out.println("Original Array: " 
-              + val[0] + " " + val[1] + " " + val[2] + " " + val[3]);
+class Exercise3 {
+    public static void main(String[] args) {
+      int[] valA = {13, -22, 82, 17}; 
+      int[] valB = {-12, 24, -79, -13};
+      int[] sum = new int[valA.length];
       
-          
-          for (int i = 0; i < val.length; i++) {
-            twice[i] = 2 * val[i];
-          }
-      
-          System.out.println("New Array: " 
-              + twice[0] + " " + twice[1] + " " + twice[2] + " " + twice[3]);
-        }
+     
+      for (int i = 0; i < valA.length; i++) {
+        sum[i] = valA[i] + valB[i];
+      }
+      System.out.print("sum: ");
+      for (int s : sum) {
+        System.out.print(s + " ");
+      }
+      System.out.println();
     }
+  }
+  
 
       
     
