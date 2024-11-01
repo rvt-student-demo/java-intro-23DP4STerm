@@ -1,34 +1,41 @@
 package lv.rvt;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-
-class Exercise5 {
+public class app {
     public static void main(String[] args) {
-      int[] val = {0, 1, 2, 3}; 
-      int temp;
-  
-      System.out.print("Original Array: ");
-      for (int v : val) {
-        System.out.print(v + " ");
-      }
-      System.out.println();
-  
-      int n = val.length;
-      for (int i = 0; i < n / 2; i++) {
-        temp = val[i];
-        val[i] = val[n - 1 - i];
-        val[n - 1 - i] = temp;
-      }
-  
-      System.out.print("Reversed Array: ");
-      for (int v : val) {
-        System.out.print(v + " ");
-      }
-      System.out.println();
-    }
-  }
-  
-  
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> birthYears = new ArrayList<>();
 
-      
+        String input;
+        while (!(input = scanner.nextLine()).isEmpty()) {
+            String[] parts = input.split(",");
+            names.add(parts[0]);
+            birthYears.add(Integer.parseInt(parts[1]));
+        }
+
+        String longestName = "";
+        int sum = 0;
+
+        for (int i = 0; i < names.size(); i++) {
+            String name = names.get(i);
+            sum += birthYears.get(i);
+
+            if (name.length() > longestName.length()) {
+                longestName = name;
+            }sebastian,2017
+            lucas,2017
+            lily,2017
+            hanna,2014
+            gabriel,2009
+        }
+
+        double averageBirthYear = (double) sum / birthYears.size();
+
+        System.out.println("Longest name: " + longestName);
+        System.out.printf("Average of the birth years: %.1f%n", averageBirthYear);
+    }
+}
+
     
